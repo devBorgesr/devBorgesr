@@ -2,45 +2,35 @@
 
 **Independent developer working on AI systems, retrieval evaluation, reproducible auditing, and evidence-driven RAG diagnostics.**
 
-I build tools around a simple idea: AI systems should be inspectable enough that claims can be tested against evidence, not just demonstrated in a polished demo.
+I build tools around a simple principle: claims about AI systems should be testable against explicit evidence, not just demonstrated in a polished demo.
 
-My current work is centered on retrieval/RAG evaluation, persistent memory for LLM systems, auditability, and reproducible technical evidence.
+## For audit clients
+
+The client-facing work lives in **[EDP Audits](https://github.com/devBorgesr/edp-audits)**.
+
+That repository is the public delivery and review layer for retrieval/RAG audits. It separates measured results, observed patterns, hypotheses, and claims the available evidence does not support. Private client data, credentials, proprietary corpora, and raw non-public exports do not belong in the public registry.
+
+The research repositories below are **not** the storage or delivery backend for client audit data.
 
 ## Selected work
 
-### [EDP v5](https://github.com/devBorgesr/edp_v5)
-
-A persistent-memory runtime for LLM systems with hybrid retrieval, provenance, and explicit epistemic states such as contradiction, quarantine, and hypothesis.
-
-The project is intentionally evidence-oriented: experiments, limitations, negative results, and reproducibility notes are documented alongside the implementation.
-
 ### [EDP Audits](https://github.com/devBorgesr/edp-audits)
 
-Public registry for independent retrieval and RAG-quality audits.
+Public registry for independent retrieval and RAG-quality audits, with explicit scope, methodology, reproducibility artifacts, limitations, and beta/client feedback when publication is authorized.
 
-Audits separate **measured results**, **observed patterns**, **hypotheses**, and **claims that are not supported by the available evidence**.
+### [EDP v5](https://github.com/devBorgesr/edp_v5)
 
-The registry also preserves audit scope, methodology, machine-readable outputs, and client/beta feedback when publication is authorized.
+Research runtime for persistent LLM memory, hybrid retrieval, provenance, and explicit epistemic states such as contradiction, quarantine, and hypothesis.
+
+It is a research system and evidence source — **not a requirement for the audit service and not a client-data repository**.
 
 ### [lab_edp](https://github.com/devBorgesr/lab_edp)
 
-A reproducible retrieval-diagnostics project focused on explicit contracts, hashes, bounded claims, and technical evidence.
+Research and diagnostic laboratory for retrieval instrumentation, reproducible experiments, sanitization, and bounded technical claims.
 
-Its current scope is deliberately narrow: diagnose retrieved material without pretending to certify end-to-end answer quality.
-
-
-## What I care about
-
-- retrieval and ranking evaluation
-- RAG diagnostics and auditability
-- persistent memory for LLM systems
-- provenance and epistemic state
-- reproducible experiments
-- documenting negative results instead of hiding them
+Public client deliverables belong in `edp-audits`, not in this laboratory repository.
 
 ## Current direction
-
-I am turning EDP from an internal research system into a more disciplined evaluation ecosystem:
 
 ```text
 retrieval / RAG system
@@ -54,12 +44,12 @@ query-level forensic analysis
 feedback / next experiment
 ```
 
-The goal is not to produce impressive-looking scores. The goal is to make it easier to understand **what changed, where it failed, what is actually supported by the evidence, and what should be tested next**.
+The goal is not to produce impressive-looking scores. The goal is to make it easier to understand **what changed, where it failed, what the evidence actually supports, and what should be tested next**.
 
 ## Working principles
 
 **Evidence before narrative.**  
-If a result is inconvenient, it still belongs in the report.
+Inconvenient results still belong in the report.
 
 **Scope before certainty.**  
 A metric only means something when its population, reference, protocol, and limitations are explicit.
@@ -68,12 +58,12 @@ A metric only means something when its population, reference, protocol, and limi
 Where practical, outputs are versioned, hashed, and tied to source snapshots.
 
 **Hypotheses are not conclusions.**  
-Observed co-occurrence is useful for designing the next experiment, not for inventing a causal story.
+Observed co-occurrence can justify the next experiment; it does not establish causation.
 
 ---
 
 ### Repositories to start with
 
-- **Core system:** [edp_v5](https://github.com/devBorgesr/edp_v5)
-- **Public audit registry:** [edp-audits](https://github.com/devBorgesr/edp-audits)
-- **Retrieval diagnostics:** [lab_edp](https://github.com/devBorgesr/lab_edp)
+- **Client-facing audit registry:** [edp-audits](https://github.com/devBorgesr/edp-audits)
+- **Research runtime:** [edp_v5](https://github.com/devBorgesr/edp_v5)
+- **Research / retrieval diagnostics:** [lab_edp](https://github.com/devBorgesr/lab_edp)
