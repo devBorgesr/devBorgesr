@@ -1,10 +1,10 @@
 # devBorgesr
 
-**Independent developer working on AI systems, retrieval evaluation, reproducible auditing, and experimental agent infrastructure.**
+**Independent developer working on AI systems, retrieval evaluation, reproducible auditing, and evidence-driven RAG diagnostics.**
 
 I build tools around a simple idea: AI systems should be inspectable enough that claims can be tested against evidence, not just demonstrated in a polished demo.
 
-My current work is centered on retrieval/RAG evaluation, persistent memory for LLM systems, auditability, and agent tooling.
+My current work is centered on retrieval/RAG evaluation, persistent memory for LLM systems, auditability, and reproducible technical evidence.
 
 ## Selected work
 
@@ -28,9 +28,6 @@ A reproducible retrieval-diagnostics project focused on explicit contracts, hash
 
 Its current scope is deliberately narrow: diagnose retrieved material without pretending to certify end-to-end answer quality.
 
-### [Synapse-Forge](https://github.com/devBorgesr/Synapse-Forge)
-
-Experimental workspace for reusable agent tooling and skill-oriented workflows.
 
 ## What I care about
 
@@ -39,7 +36,6 @@ Experimental workspace for reusable agent tooling and skill-oriented workflows.
 - persistent memory for LLM systems
 - provenance and epistemic state
 - reproducible experiments
-- agent tooling and human-in-the-loop systems
 - documenting negative results instead of hiding them
 
 ## Current direction
@@ -81,4 +77,3 @@ Observed co-occurrence is useful for designing the next experiment, not for inve
 - **Core system:** [edp_v5](https://github.com/devBorgesr/edp_v5)
 - **Public audit registry:** [edp-audits](https://github.com/devBorgesr/edp-audits)
 - **Retrieval diagnostics:** [lab_edp](https://github.com/devBorgesr/lab_edp)
-- **Agent tooling experiments:** [Synapse-Forge](https://github.com/devBorgesr/Synapse-Forge)
